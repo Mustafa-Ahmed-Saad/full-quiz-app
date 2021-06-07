@@ -42,8 +42,27 @@ body {
     border-bottom: 1px solid #dfdfdf;
     margin-bottom: 10px;
 }
+.quiz-app .answers-area .answer input[type='radio'] { /* هنا انا مش هضهر و هخفي الانبوت علاشان نبدا نعمل التنسيقات لانو مش هيقبل اس تنسيقات هعملهالو مهما حصل فهستعين بالبيفور بتعت العنصر اللي بعدة اللي هوا الاخ بتاعو مباشرتا علشان اديلو بقي التنسيقات اللي عاوزها و البيفور دا هتبقي اكنها هيا الراديو بوتوم */
+    display: none;
+}
 .quiz-app .answers-area .answer input[type='radio']:checked + label { /* كداانا بقولو الانبول اللي واخد اتربيوت تايب بيساوي ريديو في حالة انو حصلو شيكد ز كان الانبوت دا بعدة مباشرتا او اخوة المباشر اللي بعدة مباشرتا لابولل */
-    color: #0075ff;
+    color: red; /* هخلي لون اللابول احمر لما نتشيك علي الانبوت راديو */
+}
+.quiz-app .answers-area .answer input[type='radio'] + label::before { /* هدي شوية تنسيقات لل بيفور بتعت اللابول علشان تبقي شبة الانبوت راديو بالظبط */
+    content: "";
+    display: inline-block; /* لازم اديلو ديسبلاي ان لاين بلوك علشان الخصائص بعد كدا اللي هديهالو تسمع فية */
+    border: 0.1rem solid gray; /* علشان نظبطط الباك جراوند او النقطة اللي جوا بالظبط في النص بما ان الويدث و الهايدث واحد ريم فالبوردر بيكون واحد من عشرة ريم علشان يكون في النص بالظبط */
+    width: 1rem; /* استخدمت في الويدث و الهايتس الريم علشان تكون علش شكل دايرة بالظبط و كمان علشان النقطة او الباك جراوند اللي جوا يكون في النص بالظبط مش رايح شوية نحية اليمين */
+    height: 1rem;
+    border-radius: 50%;
+    margin-right: 0.5rem; /* علشان يبعد شوية عن اللابول */
+    vertical-align: bottom; /* دي علشان احركو لتحت شوية بدل ما اعمل هنا بوزيشن ريلايتف علشان احركو من التوب */
+    /*position: relative;
+    top:1px;*/
+}
+.quiz-app .answers-area .answer input[type='radio']:checked + label::before {
+    background: radial-gradient(red 0%, red 40%, transparent 50%, transparent);
+    border-color: red;
 }
 .quiz-app .answers-area .answer label {
     cursor: pointer;
@@ -51,13 +70,19 @@ body {
     color: #777;
     font-size: 14px;
     margin-left: 5px;
-    position: relative; /* علشان نديلو توب و يسمع فية من غير ما ندي الاب بوزيشن يبقي لو عاوزين نحرك اي عنصر بالنسبة لفنسة و لو كان الاب م واخد اي بوزيشن يبقي ندي للعنصر الللي عاوزين نحركو بوزيشن ريليتف علشان يتحرك بالنسبة لنفسو */
-    top: -2px;
+    position: relative;  /* علشان نديلو توب و يسمع فية من غير ما ندي الاب بوزيشن يبقي لو عاوزين نحرك اي عنصر بالنسبة لفنسة و لو كان الاب م واخد اي بوزيشن يبقي ندي للعنصر الللي عاوزين نحركو بوزيشن ريليتف علشان يتحرك بالنسبة لنفسو */
+    top: -1px;
 }
-.quiz-app .submit-button {
+.quiz-app .all-button {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.all-button .next-button,
+.all-button .back-button {
     background-color: #0075ff;
-    display: block;
-    width: 100%;
+    /* display: inline-block; */  /* مش محتاجين الدسبلاي ان لاين بلوك علشان احنا في الفليكس بوكس */
+    width: 30%;
     padding: 15px;
     border: none;
     color: #fff;
@@ -65,11 +90,36 @@ body {
     font-size: 18px;
     cursor: pointer;
     border-radius: 6px;
-    margin: 20px auto;
+    margin: 20px 0;
 }
-.quiz-app .submit-button:focus {
+.all-button .next-button:focus,
+.all-button .back-button:focus {
     outline: none;
 }
+/* .all-button .next-button { */
+    /* transform: translate(132%, 0); */
+    /* position: relative; */
+    /* right: 70%; */
+/* } */
+/* .all-button .back-button { */
+    /* transform: translate(0, 0); */
+    /* position: relative; */
+    /* right: 31%; */
+/* } */
+.all-button i {
+    background-color: #0075ff;
+    /* display: inline-block; */  /* مش محتاجين الدسبلاي ان لاين بلوك علشان احنا في الفليكس بوكس */
+    /* width: 30%; */
+    padding: 15px;
+    border: none;
+    color: #fff;
+    /* font-weight: bold; */  /* لو عملتو هيخلي الايكونة متلونى من جوا */
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
 .quiz-app .bullets {
     border-top: 1px solid #dfdfdf;
     background-color: #fff;
@@ -86,13 +136,17 @@ body {
     background-color: #ddd;
     margin-right: 5px;
     border-radius: 50%;
+    cursor: pointer;
 }
 .quiz-app .bullets .spans span.on {
-    background-color: #0075ff;    
+    background-color: #0075ff;
+}
+.quiz-app .bullets .spans span[mark] {
+    border: 3px solid black;
 }
 .quiz-app .result {
+    margin: 20px 0 15px;
     text-align: center;
-    margin: 25px 0 15px;
 }
 .quiz-app .result span {
     font-weight: bold;

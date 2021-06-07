@@ -26,7 +26,7 @@
     {
         "title": "The correct sequence of HTML tags for starting a webpage is -",
         "answer_1": "Head, Title, HTML, body",
-        "answer_2": "Head, Title, HTML, body",
+        "answer_2": "Head, HTML, body",
         "answer_3": "HTML, Title, Head, Body",
         "answer_4": "HTML, Head, Title, Body",
         "right_answer": "HTML, Head, Title, Body"
