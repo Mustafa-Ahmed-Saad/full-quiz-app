@@ -1,0 +1,82 @@
+[
+    {
+        "title": "why we use <br> element",
+        "answer_1": "to make text bold",
+        "answer_2": "to make text italic",
+        "answer_3": "to add breakline",
+        "answer_4": "to create horizontal line",
+        "right_answer": "to add breakline"
+    },
+    {
+        "title": "is <img> element has attribute href",
+        "answer_1": "yes",
+        "answer_2": "no its for anchor tag <a>",
+        "answer_3": "all element has this attribute",
+        "answer_4": "answer 1 and 3 is right",
+        "right_answer": "no its for anchor tag <a>"
+    },
+    {
+        "title": "HTML stands for -",
+        "answer_1": "HighText Machine Language",
+        "answer_2": "HyperText and links Markup Language",
+        "answer_3": "HyperText Markup Language",
+        "answer_4": "None of these",
+        "right_answer": "HyperText Markup Language"
+    },
+    {
+        "title": "The correct sequence of HTML tags for starting a webpage is -",
+        "answer_1": "Head, Title, HTML, body",
+        "answer_2": "Head, Title, HTML, body",
+        "answer_3": "HTML, Title, Head, Body",
+        "answer_4": "HTML, Head, Title, Body",
+        "right_answer": "HTML, Head, Title, Body"
+    },
+    {
+        "title": "Which of the following tag is used to insert a line-break in HTML",
+        "answer_1": "<br>",
+        "answer_2": "<a>",
+        "answer_3": "<pre>",
+        "answer_4": "<b>",
+        "right_answer": "<b>"
+    },
+    {
+        "title": "How to create an unordered list (a list with the list items in bullets) in HTML?",
+        "answer_1": "<ul>",
+        "answer_2": "<ol>",
+        "answer_3": "<li>",
+        "answer_4": "<i>",
+        "right_answer": "<ul>"
+    },
+    {
+        "title": "Which character is used to represent the closing of a tag in HTML?",
+        "answer_1": "\\",
+        "answer_2": "!",
+        "answer_3": "/",
+        "answer_4": ".",
+        "right_answer": "/"
+    },
+    {
+        "title": "How to create a hyperlink in HTML?",
+        "answer_1": "<a href = \"www.javatpoint.com\"> javaTpoint.com </a>",
+        "answer_2": "<a url = 'www.javatpoint.com' javaTpoint.com /a>",
+        "answer_3": "<a link = \"www.javatpoint.com\"> javaTpoint.com </a>",
+        "answer_4": "<a> www.javatpoint.com <javaTpoint.com /a>",
+        "right_answer": "<a href = \"www.javatpoint.com\"> javaTpoint.com </a>"
+    },
+    {
+        "title": "How to create an ordered list (a list with the list items in numbers) in HTML?",
+        "answer_1": "<ul>",
+        "answer_2": "<ol>",
+        "answer_3": "<li>",
+        "answer_4": "<i>",
+        "right_answer": "<ol>"
+    },
+    {
+        "title": "<input> is -",
+        "answer_1": "a format tag.",
+        "answer_2": "an empty tag.",
+        "answer_3": "All of the above",
+        "answer_4": "None of the above",
+        "right_answer": "an empty tag."
+    }
+]
